@@ -1,0 +1,57 @@
+# ---- macOS ----
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# ---- Windows ----
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ---- Linux ----
+.directory
+.Trash-*
+.nfs*
+
+# ---- Editors / IDEs ----
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.\#*
+\#*\#
+.project
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# ---- Env & secrets ----
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ---- Logs & temp ----
+*.log
+npm-debug.log*
+yarn-error.log*
+tmp/
+temp/
+.cache/
+
+# ---- Dependencies & build output (for examples) ----
+node_modules/
+dist/
+build/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
