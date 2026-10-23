@@ -251,8 +251,7 @@ class _Conversation:
         intro = self.t("", "From the lesson (Arabic source):\n")
         text = intro + (top.text if detailed else _first_sentences(top.text, 2))
         if len(hits) > 1:
-            text += self.t("\n\nانظر أيضًا: «", "\n\nSee also: “") + hits[1].title + self.t("» — ", "” — ")
-            text += _first_sentences(hits[1].text, 1)
+            text += self.t("\n\nانظر أيضًا: «", "\n\nSee also: “") + hits[1].title + self.t("».", "”.")
         return ModelStep(kind="answer", text=text, cited=[h.passage_id for h in hits])
 
     def _answer_next(self) -> ModelStep:
@@ -290,7 +289,12 @@ class _Conversation:
     def _describe(self, r: dict[str, Any]) -> list[str]:
         tool, result = r["tool"], r.get("result") or {}
         if tool in FIELD_LABELS:
-            return [self.t(f"✓ كتبتُ {FIELD_LABELS[tool][0]} وظهر في المختبر كما هو.", f"✓ I set the {FIELD_LABELS[tool][1]} and it shows in the lab.")]
+            return [
+                self.t(
+                    f"✓ حدّثتُ حقل «{FIELD_LABELS[tool][0]}» وتحققتُ من ظهوره في المختبر.",
+                    f"✓ I set the {FIELD_LABELS[tool][1]} field and checked it shows in the lab.",
+                )
+            ]
         if tool in ("generate_draft", "revise_draft"):
             draft = result.get("draft", {})
             return [self.t(f"✓ ولّدتُ المسودة رقم {draft.get('number')}.", f"✓ I generated draft {draft.get('number')}.")]
