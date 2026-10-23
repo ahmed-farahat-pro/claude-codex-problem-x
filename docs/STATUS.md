@@ -58,3 +58,10 @@ Last updated: 2026-10-23.
 3. Add a Gemini key and re-run the grounding eval and the lab flow in `gemini` mode.
 4. Add the Playwright browser lab adapter behind the same tool manifest.
 5. Produce the eight-minute recorded L03 lesson (Phase B).
+
+## Known follow-ups
+
+- Return rule checks inside `generate_draft` / `revise_draft` results so the UI does not need an extra `read_output` step.
+- Add a server-sent event stream for session events (PRD section 21) to replace the frontend's 1.5 s polling.
+- Add `GET /api/me/sessions/active` so the UI can resume without relying on the `409 session_active` response.
+- Frontend has no automated test suite yet; the browser flow was checked manually with Playwright.
