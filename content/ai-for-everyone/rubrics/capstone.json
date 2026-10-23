@@ -1,0 +1,14 @@
+{
+  "rubric_id": "capstone",
+  "version": "0.1.0",
+  "kind": "model-assisted-with-review",
+  "pass_rule": "70/100 with no unresolved critical factual or privacy failure.",
+  "calibration": "Calibrate against at least 30 founder reviewed samples before relying on automatic passing.",
+  "criteria": [
+    { "criterion_id": "task_audience_fit", "weight": 20, "evidence": "Clear goal, intended user and useful output." },
+    { "criterion_id": "correctness_verification", "weight": 25, "evidence": "Claims checked, sources valid, calculations or logic inspected." },
+    { "criterion_id": "prompt_workflow_quality", "weight": 20, "evidence": "Reproducible steps, sensible constraints and revision rationale." },
+    { "criterion_id": "artifact_quality", "weight": 20, "evidence": "Readable, coherent, usable final work with suitable media." },
+    { "criterion_id": "responsible_handling", "weight": 15, "evidence": "Appropriate data, asset rights, limitations and explanation of choices." }
+  ]
+}

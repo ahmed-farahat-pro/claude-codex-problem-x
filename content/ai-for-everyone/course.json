@@ -1,0 +1,194 @@
+{
+  "course_id": "ai-for-everyone",
+  "version": "0.1.0",
+  "language": "ar",
+  "title": { "ar": "الذكاء الاصطناعي للجميع", "en": "AI for Everyone" },
+  "brief": {
+    "target_learner": "Arabic speaking adults seeking practical AI skills for work or a small business.",
+    "prerequisite": "A laptop, basic browser skills and about ten hours a week.",
+    "four_week_outcome": "Produce, explain and improve a useful piece of AI-assisted work, ending in a reviewed portfolio project.",
+    "scope": "20 lessons, four weeks, 40 learning hours, about five hours of recorded video and a portfolio project.",
+    "risks": "Invented claims in generated drafts; learners over-trusting output; lab dependencies changing.",
+    "price_hypothesis": "Founding cohort SAR299, standard SAR499, guided SAR799 (experiments, not market prices).",
+    "reviewer": null
+  },
+  "release": {
+    "last_review_date": null,
+    "known_limitations": [
+      "Only lesson L03 has a runnable lab recipe.",
+      "Lesson outcomes below are copied from PRD v2 in English; Arabic learner-facing text is still to be written and reviewed.",
+      "Retrieval passages are drafts and must be reviewed by the founder before the pilot."
+    ],
+    "reviewer_signoff": null,
+    "rollback_version": null
+  },
+  "weeks": [
+    { "week": 1, "title": { "ar": "الأسس وكتابة البرومبت", "en": "Foundations and prompts" }, "portfolio_result": "Prompt pack and a verified short business draft." },
+    { "week": 2, "title": { "ar": "الإنتاجية والبحث", "en": "Productivity and research" }, "portfolio_result": "Research brief, checked spreadsheet and one page memo." },
+    { "week": 3, "title": { "ar": "العمل الإبداعي والفيديو", "en": "Creative work and video" }, "portfolio_result": "30 to 60 second video with captions and provenance." },
+    { "week": 4, "title": { "ar": "سير العمل والملف النهائي", "en": "Workflows and portfolio" }, "portfolio_result": "Working workflow and complete portfolio case study." }
+  ],
+  "lessons": [
+    {
+      "lesson_id": "L01", "week": 1, "version": "0.1.0",
+      "title": { "ar": "البدء مع الذكاء الاصطناعي", "en": "Getting started with AI" },
+      "outcome": "Select a small useful task, supply a clear request, and distinguish a generated draft from a checked final output.",
+      "lab": "Open the course-owned Content Studio and inspect a fictional cafe brief.",
+      "deliverable": "One saved request, one actual generated draft, and a three-item verification checklist.",
+      "acceptance": "The saved run contains a nonempty request, response, model identifier, timestamp, and fixture version. The final checklist contains at least three independently checkable requirements."
+    },
+    {
+      "lesson_id": "L02", "week": 1, "version": "0.1.0",
+      "title": { "ar": "كيف يعمل المساعد الذكي", "en": "How an AI assistant works" },
+      "outcome": "Use context deliberately and handle a question that the provided material cannot answer.",
+      "lab": "Ask the same question with and without a supplied cafe information sheet.",
+      "deliverable": "A comparison of two runs and one corrected uncertainty-handling instruction.",
+      "acceptance": "Both comparison runs use the same question and explicitly different context inputs. The learner explains, in one or two sentences, what information would resolve the uncertainty."
+    },
+    {
+      "lesson_id": "L03", "week": 1, "version": "0.1.0",
+      "title": { "ar": "اكتب برومبت واضحًا", "en": "Write a clear prompt" },
+      "outcome": "Construct an Arabic business prompt containing task, context, constraints, and output format.",
+      "lab": "Fill the fictional business, audience, offer, and communication goal fields.",
+      "deliverable": "A four-part Arabic prompt, the resulting post, and a checked rubric.",
+      "acceptance": "The prompt explicitly contains the task, audience/context, constraints, and desired output form. The learner verifies that the draft does not invent a new discount or business claim.",
+      "recipe": "lessons/L03.recipe.json"
+    },
+    {
+      "lesson_id": "L04", "week": 1, "version": "0.1.0",
+      "title": { "ar": "حسّن النتائج بالمراجعة", "en": "Improve results through revision" },
+      "outcome": "Improve one output by changing a specific requirement while preserving verified facts.",
+      "lab": "Load the L03 draft and ask for a version no longer than 35 words.",
+      "deliverable": "Two versions, one revision instruction, and a brief change log.",
+      "acceptance": "The revised version contains no more than 35 whitespace-delimited words. The change log identifies at least two deliberate differences between versions."
+    },
+    {
+      "lesson_id": "L05", "week": 1, "version": "0.1.0",
+      "title": { "ar": "تحدي الأسبوع الأول", "en": "Week one challenge" },
+      "outcome": "Apply the prompting method independently to a different fictional business brief.",
+      "lab": "Read a new fictional bookstore or training-event brief.",
+      "deliverable": "A complete prompt-to-reviewed-output record for the new fixture.",
+      "acceptance": "The prompt references the new fixture rather than leaving cafe-specific fields behind. The submission includes the original output, revised output, and reasons for the changes."
+    },
+    {
+      "lesson_id": "L06", "week": 2, "version": "0.1.0",
+      "title": { "ar": "الكتابة والبريد المهني", "en": "Writing and professional email" },
+      "outcome": "Draft a professional message appropriate to its audience and revise its tone without changing the facts.",
+      "lab": "Generate a draft email requesting a meeting about a fictional project.",
+      "deliverable": "A reviewed email draft and tone comparison; no email is sent.",
+      "acceptance": "Subject, greeting, purpose, proposed next step, and closing are present. No new promise, price, or commitment is added, and no outbound-send tool is invoked."
+    },
+    {
+      "lesson_id": "L07", "week": 2, "version": "0.1.0",
+      "title": { "ar": "الملخصات والتفكير المنظم", "en": "Summaries and structured thinking" },
+      "outcome": "Convert a source document into an accurate summary and distinguish decisions from proposed actions.",
+      "lab": "Load a supplied meeting transcript and request a short summary.",
+      "deliverable": "A 150-word-or-shorter summary and an action table linked to source excerpts.",
+      "acceptance": "The summary is within 150 whitespace-delimited words and preserves all three seeded decisions. Unknown owners and deadlines remain marked unknown rather than being invented."
+    },
+    {
+      "lesson_id": "L08", "week": 2, "version": "0.1.0",
+      "title": { "ar": "البحث والتحقق من المصادر", "en": "Research and source checking" },
+      "outcome": "Answer a bounded question using traceable evidence and distinguish a source fact from an inference.",
+      "lab": "Investigate a low-stakes product or learning-resource comparison using at least three relevant primary sources.",
+      "deliverable": "A short research note and a claim-to-source table.",
+      "acceptance": "At least three non-duplicate source URLs or snapshot identifiers are present. The seeded misleading claim is corrected or explicitly marked unresolved."
+    },
+    {
+      "lesson_id": "L09", "week": 2, "version": "0.1.0",
+      "title": { "ar": "الجداول والبيانات البسيطة", "en": "Spreadsheets and simple data" },
+      "outcome": "Clean a small dataset and verify a simple total or comparison independently of an AI explanation.",
+      "lab": "Import a small fictional sales or study-time dataset.",
+      "deliverable": "A cleaned CSV, one working formula or calculation, and one chart or summary table.",
+      "acceptance": "The cleaned file has the expected row count and numeric types. The written insight is consistent with the table and does not invent causation."
+    },
+    {
+      "lesson_id": "L10", "week": 2, "version": "0.1.0",
+      "title": { "ar": "تحدي الإنتاجية", "en": "Productivity challenge" },
+      "outcome": "Combine a document, a source check, and a small calculation into a useful reviewed deliverable.",
+      "lab": "Read a new fictional project brief with an attached mini-dataset.",
+      "deliverable": "A one-page memo with a verified calculation and evidence table.",
+      "acceptance": "The memo answers the assigned question and stays within the specified one-page structure. Every externally sourced factual statement has a valid evidence-table reference."
+    },
+    {
+      "lesson_id": "L11", "week": 3, "version": "0.1.0",
+      "title": { "ar": "إنشاء الصور بالذكاء الاصطناعي", "en": "Creating images with AI" },
+      "outcome": "Translate a visual goal into an image brief and review the generated image against explicit requirements.",
+      "lab": "Write a brief covering subject, composition, palette, and intended use.",
+      "deliverable": "One selected image, its generation brief, and a visual-review checklist.",
+      "acceptance": "The image file opens and matches the requested aspect ratio. The submission records the model, input assets, and intended usage; quality judgments receive rubric review rather than a fabricated automatic certainty score."
+    },
+    {
+      "lesson_id": "L12", "week": 3, "version": "0.1.0",
+      "title": { "ar": "القصص والسيناريوهات", "en": "Stories and scripts" },
+      "outcome": "Write a short script with a single outcome, a clear sequence, and visual instructions that can be produced.",
+      "lab": "Choose a simple explanation or fictional campaign objective.",
+      "deliverable": "A timed script and three-to-five-scene storyboard.",
+      "acceptance": "The storyboard contains three to five scenes with start/end timing and nonempty narration. The opening, explanation, and ending each support the same stated learning or communication goal."
+    },
+    {
+      "lesson_id": "L13", "week": 3, "version": "0.1.0",
+      "title": { "ar": "الصوت العربي والتعليق الصوتي", "en": "Arabic voice and narration" },
+      "outcome": "Generate or record clear Arabic narration and correct difficult names, numbers, and mixed-language terms.",
+      "lab": "Split the approved script into short narration segments.",
+      "deliverable": "An accepted narration file, transcript, and pronunciation notes.",
+      "acceptance": "The exported audio opens and its duration fits the storyboard after any documented timing revision. The transcript matches the intended spoken content and the voice-use basis is recorded."
+    },
+    {
+      "lesson_id": "L14", "week": 3, "version": "0.1.0",
+      "title": { "ar": "إنشاء الفيديو وتحريره", "en": "Creating and editing video" },
+      "outcome": "Assemble a short video with readable visuals, synchronized narration, and captions.",
+      "lab": "Import the approved visual assets and narration into the real editor.",
+      "deliverable": "One exported MP4 and its editable project or assembly manifest.",
+      "acceptance": "The MP4 plays for the planned 30-60 second duration with both video and audio tracks. No missing-asset placeholder or unintended black segment remains in the export."
+    },
+    {
+      "lesson_id": "L15", "week": 3, "version": "0.1.0",
+      "title": { "ar": "تحدي الفيديو القصير", "en": "Short-video challenge" },
+      "outcome": "Complete and revise a short media piece from a new brief using the complete production checklist.",
+      "lab": "Produce a short explanation for a new low-stakes topic or fictional business.",
+      "deliverable": "A reviewed short video, source-asset list, and one documented revision.",
+      "acceptance": "The final video passes the playback, duration, caption, and missing-asset checks from L14. The submission includes the peer comment and a specific change made in response."
+    },
+    {
+      "lesson_id": "L16", "week": 4, "version": "0.1.0",
+      "title": { "ar": "بناء سير عمل عملي", "en": "Building a practical workflow" },
+      "outcome": "Turn a repeated task into a defined sequence with inputs, checks, and outputs.",
+      "lab": "Map one task into three to six steps.",
+      "deliverable": "A workflow checklist or small recipe and its successful run record.",
+      "acceptance": "The workflow has three to six ordered steps with nonempty inputs and expected results. At least one failure condition has an explicit stop, retry, or human-review response."
+    },
+    {
+      "lesson_id": "L17", "week": 4, "version": "0.1.0",
+      "title": { "ar": "التقييم والتحسين", "en": "Evaluation and improvement" },
+      "outcome": "Use a rubric to identify a real weakness and verify that a revision improves it.",
+      "lab": "Score two seeded outputs using the same four-criterion rubric.",
+      "deliverable": "Two completed rubric forms and one evidence-backed revision.",
+      "acceptance": "Identify one specific error in the original output. Every criterion has a score and a specific supporting observation. The revised output resolves that error without introducing a new contradiction."
+    },
+    {
+      "lesson_id": "L18", "week": 4, "version": "0.1.0",
+      "title": { "ar": "ابدأ مشروعك النهائي", "en": "Start your final project" },
+      "outcome": "Define a manageable project and produce a first version that can be evaluated.",
+      "lab": "Choose one of the final-project tracks and define the target user and measurable output requirements.",
+      "deliverable": "A project brief, artifact inventory, first version, and issue list.",
+      "acceptance": "The brief defines one target user and three to five observable success requirements. The issue list identifies remaining work rather than presenting an unchecked draft as final."
+    },
+    {
+      "lesson_id": "L19", "week": 4, "version": "0.1.0",
+      "title": { "ar": "راجع مشروعك", "en": "Review your project" },
+      "outcome": "Review accuracy, usefulness, clarity, and reproducibility before final submission.",
+      "lab": "Check claims, calculations, file playback, captions, and asset records relevant to the selected track.",
+      "deliverable": "A reviewed project version, second-input run, and final checklist.",
+      "acceptance": "All mandatory checks for the chosen track are completed with evidence. No unresolved critical factual contradiction or broken required file remains."
+    },
+    {
+      "lesson_id": "L20", "week": 4, "version": "0.1.0",
+      "title": { "ar": "اعرض ما صنعته", "en": "Present what you made" },
+      "outcome": "Explain the original problem, demonstrate the result, and describe the role and limitations of AI honestly.",
+      "lab": "Prepare a three-to-five-minute walkthrough or equivalent short presentation.",
+      "deliverable": "A final portfolio package, walkthrough, and personal next-step plan.",
+      "acceptance": "The walkthrough includes problem, process, result, evidence, and limitations. AI-generated components and human review are accurately described; the learner does not claim unsupported automation or independent verification."
+    }
+  ]
+}

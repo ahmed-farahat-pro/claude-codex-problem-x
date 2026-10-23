@@ -1,0 +1,14 @@
+{
+  "template_id": "content-studio",
+  "version": "0.1.0",
+  "kind": "server-state-lab",
+  "description": "Course-owned Content Studio: brief, audience, tone, prompt, generated drafts and save. The lab state is server owned; the UI renders it and every change goes through a typed tool.",
+  "fixtures": ["cafe-launch", "bookstore-evening"],
+  "limits": {
+    "max_drafts": 20,
+    "max_field_chars": { "brief": 1200, "audience": 200, "tone": 60, "prompt": 2000, "instruction": 500 }
+  },
+  "network_policy": "No outbound network from the lab itself. Only the server-side model adapter calls the configured model provider.",
+  "credentials_policy": "The lab holds no credentials. Provider keys stay in server environment variables.",
+  "reset_procedure": "Reload the active fixture and clear audience, tone, prompt and drafts. Saved artifacts are kept."
+}

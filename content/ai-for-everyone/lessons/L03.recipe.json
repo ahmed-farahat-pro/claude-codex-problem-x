@@ -1,0 +1,32 @@
+{
+  "lesson_id": "L03",
+  "recipe_version": "0.1.0",
+  "title": { "ar": "اكتب برومبت واضحًا", "en": "Write a clear prompt" },
+  "outcome": {
+    "ar": "تكتب برومبت عربيًا منظمًا لنشاط تجاري صغير، ثم تقيّم المسودة الناتجة وتحسّنها.",
+    "en": "The learner writes a structured Arabic prompt for a small business, evaluates the generated result and improves it."
+  },
+  "lab_template_id": "content-studio",
+  "fixture_id": "cafe-launch",
+  "practice_fixture_id": "bookstore-evening",
+  "allowed_tools": [
+    "open_lab", "read_lab_state", "set_brief", "set_audience", "set_tone", "set_prompt",
+    "generate_draft", "revise_draft", "read_output", "save_draft", "reset_lab"
+  ],
+  "rubric_id": "prompt-checklist",
+  "passages": "passages/L03.ar.json",
+  "eval_set": "eval/L03-questions.json",
+  "next_practice": {
+    "ar": "حلّ ملخص «مكتبة الصفحة» بنفسك: برومبت منظم، مسودة، ثم فحص الادعاءات.",
+    "en": "Solve the Al Safha Bookstore brief yourself: structured prompt, draft, then check the claims."
+  },
+  "timeline": [
+    { "start": "0:00", "end": "0:45", "on_screen": "State the outcome and show a weak prompt plus an unsatisfactory draft.", "evidence": "Visible baseline artifact." },
+    { "start": "0:45", "end": "2:00", "on_screen": "Explain goal, context, audience, constraints and required output format.", "evidence": "Five elements highlighted in the actual prompt." },
+    { "start": "2:00", "end": "4:00", "on_screen": "The instructor fills the lab and generates a draft through the real model adapter.", "evidence": "Action log and saved model output, not fabricated UI footage." },
+    { "start": "4:00", "end": "5:30", "on_screen": "Check audience, factual claims, tone, length and call to action.", "evidence": "Rubric evidence, including one limitation or error." },
+    { "start": "5:30", "end": "6:45", "on_screen": "Revise the prompt and generate again. Explain the change.", "evidence": "A second stored output and comparison." },
+    { "start": "6:45", "end": "7:30", "on_screen": "Compare versions and export the better draft.", "evidence": "Downloadable artifact and clear reason for selection." },
+    { "start": "7:30", "end": "8:00", "on_screen": "Give a different brief for the learner to solve independently.", "evidence": "Task fixture and completion criteria." }
+  ]
+}

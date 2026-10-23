@@ -1,0 +1,17 @@
+{
+  "lesson_id": "L03",
+  "version": "0.1.0",
+  "note": "Ten question grounding set: answerable, ambiguous and outside-the-course questions. Target from PRD section 23: at least 9 of 10 handled correctly.",
+  "questions": [
+    { "id": "q01", "text": "ما هي عناصر البرومبت المنظم؟", "expect": "grounded", "sections": ["elements"] },
+    { "id": "q02", "text": "لماذا يضيف النموذج خصمًا غير موجود؟", "expect": "grounded", "sections": ["invented-claims", "check-draft", "constraints"] },
+    { "id": "q03", "text": "كيف أحدد الجمهور في البرومبت؟", "expect": "grounded", "sections": ["audience"] },
+    { "id": "q04", "text": "ما هي الدعوة لاتخاذ إجراء؟", "expect": "grounded", "sections": ["call-to-action"] },
+    { "id": "q05", "text": "كيف أعدّ الكلمات إذا كانت المسودة طويلة؟", "expect": "grounded", "sections": ["word-count"] },
+    { "id": "q06", "text": "What is a call to action?", "expect": "grounded", "sections": ["call-to-action"] },
+    { "id": "q07", "text": "هل أضع أرقام هواتف العملاء في البرومبت؟", "expect": "grounded", "sections": ["privacy"] },
+    { "id": "q08", "text": "هل هذا جيد؟", "expect": "clarify", "sections": [] },
+    { "id": "q09", "text": "كم سعر سهم أرامكو اليوم؟", "expect": "boundary", "sections": [] },
+    { "id": "q10", "text": "Who won the football match yesterday?", "expect": "boundary", "sections": [] }
+  ]
+}

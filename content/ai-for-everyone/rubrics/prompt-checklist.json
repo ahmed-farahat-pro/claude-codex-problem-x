@@ -1,0 +1,16 @@
+{
+  "rubric_id": "prompt-checklist",
+  "version": "0.1.0",
+  "kind": "rule-based",
+  "note": "Deterministic keyword and count checks. They support feedback; they are not a grade and do not replace review.",
+  "max_words": 70,
+  "criteria": [
+    { "criterion_id": "prompt_task", "label": { "ar": "البرومبت يحدد المهمة", "en": "Prompt states the task" } },
+    { "criterion_id": "prompt_context", "label": { "ar": "البرومبت يتضمن سياق النشاط والجمهور", "en": "Prompt includes business context and audience" } },
+    { "criterion_id": "prompt_constraints", "label": { "ar": "البرومبت يحدد القيود", "en": "Prompt sets constraints" } },
+    { "criterion_id": "prompt_output_format", "label": { "ar": "البرومبت يحدد صيغة المخرجات", "en": "Prompt asks for an output format" } },
+    { "criterion_id": "draft_length", "label": { "ar": "المنشور ضمن 70 كلمة", "en": "Post is within 70 words" } },
+    { "criterion_id": "draft_call_to_action", "label": { "ar": "المنشور ينتهي بدعوة لاتخاذ إجراء", "en": "Post has a call to action" } },
+    { "criterion_id": "draft_no_unsupported_claims", "label": { "ar": "لا أرقام أو عروض غير موجودة في الملخص", "en": "No numbers or offers missing from the brief" } }
+  ]
+}
